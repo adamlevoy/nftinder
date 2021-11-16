@@ -13,8 +13,12 @@ function App() {
   const [ count, setCount ] = useState(0);
 
   if(loading) return (
-    <div>
-      Loading...
+    <div className="wrapper">
+      <h1>🔥NFTinder🔥</h1>
+      <div className="imgWrapper">
+        Loading...
+      </div>
+      <button onClick={() => setCount(initialCount => initialCount + 1)}>Next</button>
     </div>
   )
 
