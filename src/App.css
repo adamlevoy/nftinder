@@ -1,3 +1,48 @@
+h1 {
+  font-weight: 900;
+  color: #2f4fda;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+img {
+  border-radius: 1rem;
+  width: 100%;
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.1),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.072),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.06),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.05),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.04),
+    100px 100px 80px rgba(0, 0, 0, 0.028);
+}
+
+button {
+  padding-block: 1rem;
+  padding-inline: 2.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #2f4fda;
+  margin: 1rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 0.25rem;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgWrapper {
+  max-width: 500px;
+  margin-inline: auto;
+}
+
 .App {
   text-align: center;
 }
