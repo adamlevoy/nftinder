@@ -28,7 +28,7 @@ function App() {
       <div className="showcase">
         <h2>{data.assets[count].name}</h2>
         <div className="imgWrapper">
-        {data.assets[count].image_url ? <img src={data.assets[count].image_url} alt="" /> : <h3>No image ☠️</h3>}
+        <img src={data.assets[count].image_url} alt="" />
         </div>
       </div>
       <div className="toggleWrapper">
@@ -44,7 +44,7 @@ function App() {
         <p><span>Collection:</span>{data.assets[count].collection.name}</p>
         {data.assets[count].description ? <p><span>Description:</span> {data.assets[count].description}</p> : <p><span>Description:</span>none</p>}
         <p><span>Creator:</span>{data.assets[count].creator.user.username}</p>
-        {data.assets[count].creator.image_thumbnail_url ? <img className="creatorAvatar" src={data.assets[count].creator.image_thumbnail_url} alt=""/> : null}
+        {data.assets[count].creator.profile_img_url ? <img className="creatorAvatar" src={data.assets[count].creator.profile_img_url} alt=""/> : null}
       </div>
     </div>
   );
