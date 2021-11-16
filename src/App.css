@@ -19,16 +19,26 @@ img {
 }
 
 button {
-  padding-block: 1rem;
-  padding-inline: 2.5rem;
   border: none;
-  border-radius: 5px;
-  background-color: #2f4fda;
-  margin: 1rem;
-  font-weight: bold;
-  color: white;
-  letter-spacing: 0.25rem;
+  /* margin: 1rem; */
   cursor: pointer;
+  font-size: 3.5rem;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.showcase {
+  margin-block: 1rem;
+  text-align: center;
+}
+
+.showcase h2 {
+  margin-bottom: 0.5rem;
 }
 
 .wrapper {
@@ -41,6 +51,29 @@ button {
 .imgWrapper {
   max-width: 500px;
   margin-inline: auto;
+}
+
+.toggleWrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.details {
+  max-width: 500px;
+  margin-inline: auto;
+  margin-block: 1rem;
+  background: whitesmoke;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.details span {
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.creatorAvatar {
+  max-width: 100px;
 }
 
 .App {

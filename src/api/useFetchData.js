@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const useFetchData = ({baseUrl, options}) => {
+export const useFetchData = ({baseUrl, limit, options}) => {
   const [ data, setData ] = useState({});
   const [ loading, setLoading ] = useState(true);
 
@@ -8,7 +8,7 @@ export const useFetchData = ({baseUrl, options}) => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(baseUrl, options);
+        const response = await fetch(`${baseUrl}${limit}`, options);
         const data = await response.json();
         setData(data);
         console.log("🚀 data", data);
@@ -18,7 +18,7 @@ export const useFetchData = ({baseUrl, options}) => {
       setLoading(false);
     }
     fetchData();
-  }, [ baseUrl, options]);
+  }, [ baseUrl, limit, options]);
 
   return [ data, loading ];
 }
