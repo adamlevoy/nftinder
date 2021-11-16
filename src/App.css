@@ -67,6 +67,10 @@ a {
   padding: 1rem;
 }
 
+.details p {
+  margin-block: 1rem;
+}
+
 .details span {
   margin-right: 1rem;
   font-weight: bold;
