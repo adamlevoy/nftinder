@@ -1,6 +1,8 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 import { useFetchData } from './api/useFetchData'
+
+const UserContext = createContext();
 
 const openSeaBaseUrl = "https://api.opensea.io/api/v1/assets";
 const openSeaApiOptions = {method: 'GET'};
@@ -23,17 +25,20 @@ function App() {
   )
 
   return (
+    <UserContext.Provider value={{
+      user: true
+    }}>
     <div className="wrapper">
-      <h1>🔥NFTinder🔥</h1>
+      <h1>😍 NFTinder</h1>
       <div className="showcase">
-        <h2>{data.assets[count].name}</h2>
         <div className="imgWrapper">
         <img src={data.assets[count].image_url} alt="" />
         </div>
+        <h2>{data.assets[count].name}</h2>
       </div>
       <div className="toggleWrapper">
-        <button onClick={() => setCount(initialCount => initialCount + 1)}>🧊</button>
-        <button onClick={() => setCount(initialCount => initialCount + 1)}>🔥</button>
+        <button onClick={() => setCount(initialCount => initialCount + 1)}>🤮</button>
+        <button onClick={() => setCount(initialCount => initialCount + 1)}>😍</button>
       </div>
       <a href={data.assets[count].permalink} target="_blank" rel="noreferrer">View Listing</a>
 
@@ -47,6 +52,7 @@ function App() {
         {data.assets[count].creator.profile_img_url ? <img className="creatorAvatar" src={data.assets[count].creator.profile_img_url} alt=""/> : null}
       </div>
     </div>
+  </UserContext.Provider>
   );
 }
 

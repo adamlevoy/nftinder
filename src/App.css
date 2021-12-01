@@ -1,6 +1,20 @@
+:root {
+  --white: whitesmoke;
+  --pink: #fecafa;
+  --blue: #2f4fda;
+}
+
+body {
+  margin: 1rem;
+  font-family: "Nunito", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--pink);
+}
+
 h1 {
   font-weight: 900;
-  color: #2f4fda;
+  color: var(--blue);
 }
 
 h2 {
@@ -8,14 +22,7 @@ h2 {
 }
 
 img {
-  border-radius: 1rem;
   width: 100%;
-  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.1),
-    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.072),
-    12.5px 12.5px 10px rgba(0, 0, 0, 0.06),
-    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.05),
-    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.04),
-    100px 100px 80px rgba(0, 0, 0, 0.028);
 }
 
 button {
@@ -33,12 +40,23 @@ a {
 }
 
 .showcase {
+  border-radius: 1rem;
   margin-block: 1rem;
   text-align: center;
+  background: var(--white);
+  overflow: hidden;
+
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.1),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.072),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.06),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.05),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.04),
+    100px 100px 80px rgba(0, 0, 0, 0.028);
 }
 
 .showcase h2 {
   margin-bottom: 0.5rem;
+  background: var(--white);
 }
 
 .wrapper {
@@ -51,6 +69,7 @@ a {
 .imgWrapper {
   max-width: 500px;
   margin-inline: auto;
+  overflow: none;
 }
 
 .toggleWrapper {
