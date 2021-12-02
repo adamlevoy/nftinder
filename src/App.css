@@ -6,6 +6,7 @@
   --btnPrimary: var(--blue);
 
   --rounded: 0.275rem;
+  --shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
 }
 
 body {
@@ -107,7 +108,7 @@ a {
   border: none;
   border-radius: var(--rounded);
 
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+  box-shadow: var(--shadow);
 
   padding: 0.25em 0.75em;
   min-width: 10ch;
@@ -137,7 +138,7 @@ a {
 
 .loginForm input {
   min-width: 10ch;
-  min-height: 30px;
+  min-height: 35px;
   margin: 1rem;
   margin: 0.25rem;
   font-size: 16px;
@@ -145,6 +146,11 @@ a {
   border-radius: var(--rounded);
   outline: none;
   border: 1px solid var(--blue);
+}
+
+.loginForm input:focus {
+  border: 2px solid var(--blue);
+  box-shadow: var(--shadow);
 }
 
 .details {

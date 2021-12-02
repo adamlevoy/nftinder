@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 
-const Form = () => {
+const Login = () => {
   const [ username, setUser ] = useState('');
   const [ password, setPassword ] = useState('');
   // const isInvalid = password === '' || username === '';
@@ -23,4 +23,4 @@ const Form = () => {
   )
 }
 
-export default Form;
+export default Login;

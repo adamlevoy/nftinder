@@ -6,7 +6,7 @@ const Home = () => {
     <main className="home">
       <div className="wrapper">
         <h1>😍 NFTinder</h1>
-        <h2>Dating style NFT discovery</h2>
+        <h2>Friendly NFT discovery</h2>
         <div>
           <Login />
         </div>
