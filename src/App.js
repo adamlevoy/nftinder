@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, createContext } from 'react';
-import { useFetchData } from './api/useFetchData'
+import { useFetchData } from './api/useFetchData';
+import Header from './components/Header';
 
 const UserContext = createContext();
 
@@ -17,7 +18,7 @@ function App() {
 
   if(loading) return (
     <div className="wrapper">
-      <h1>🔥NFTinder🔥</h1>
+      <Header />
       <div className="imgWrapper">
         Loading...
       </div>
@@ -25,11 +26,12 @@ function App() {
   )
 
   return (
-    <UserContext.Provider value={{
-      user: true
+    <UserContext.Provider
+      value={{
+        user: true
     }}>
     <div className="wrapper">
-      <h1>😍 NFTinder</h1>
+      <Header />
       <div className="showcase">
         <div className="imgWrapper">
         <img src={data.assets[count].image_url} alt="" />
@@ -37,8 +39,8 @@ function App() {
         <h2>{data.assets[count].name}</h2>
       </div>
       <div className="toggleWrapper">
-        <button onClick={() => setCount(initialCount => initialCount + 1)}>🤮</button>
-        <button onClick={() => setCount(initialCount => initialCount + 1)}>😍</button>
+        <button className="btnToggle" onClick={() => setCount(initialCount => initialCount + 1)}>🤮</button>
+        <button className="btnToggle" onClick={() => setCount(initialCount => initialCount + 1)}>😍</button>
       </div>
       <a href={data.assets[count].permalink} target="_blank" rel="noreferrer">View Listing</a>
 
