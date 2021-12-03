@@ -64,18 +64,19 @@ a {
   text-align: center;
 }
 
-.showcase h2 {
-  margin-bottom: 0.5rem;
-  background: var(--white);
-}
-
-.wrapper {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 50rem;
   padding-inline: 1rem;
-  margin-inline: auto;
+  margin: 0 auto;
+}
+
+.showcase h2 {
+  margin-bottom: 0.5rem;
+  background: var(--white);
 }
 
 .imgWrapper {
@@ -154,7 +155,7 @@ a {
 }
 
 .details {
-  max-width: 500px;
+  width: 500px;
   margin-inline: auto;
   margin-block: 1rem;
   background: whitesmoke;
@@ -173,4 +174,11 @@ a {
 
 .creatorAvatar {
   max-width: 100px;
+}
+
+/* media queries */
+@media only screen and (max-width: 600px) {
+  .details {
+    width: 90vw;
+  }
 }

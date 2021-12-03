@@ -17,7 +17,7 @@ function App() {
   const [ count, setCount ] = useState(0);
 
   if(loading) return (
-    <div className="wrapper">
+    <div className="container">
       <Header />
       <div className="imgWrapper">
         Loading...
@@ -30,7 +30,7 @@ function App() {
       value={{
         user: true
     }}>
-    <div className="wrapper">
+    <div className="container">
       <Header />
       <div className="showcase">
         <div className="imgWrapper">
