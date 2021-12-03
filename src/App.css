@@ -31,8 +31,23 @@ img {
 
 a {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 18px;
   font-weight: bold;
+  color: var(--blue);
+}
+
+footer {
+  text-align: center;
+  color: var(--white);
+  padding: 1rem;
+  background-color: var(--blue);
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+  font-weight: initial;
+  font-size: initial;
 }
 
 .header {

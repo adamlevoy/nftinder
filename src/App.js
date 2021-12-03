@@ -2,6 +2,7 @@ import './App.css';
 import { useState, createContext } from 'react';
 import { useFetchData } from './api/useFetchData';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const UserContext = createContext();
 
@@ -54,6 +55,7 @@ function App() {
         {data.assets[count].creator.profile_img_url ? <img className="creatorAvatar" src={data.assets[count].creator.profile_img_url} alt=""/> : null}
       </div>
     </div>
+    <Footer />
   </UserContext.Provider>
   );
 }
